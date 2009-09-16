@@ -3,7 +3,6 @@ import java.awt.Color
 import javax.swing.JOptionPane
 import static javax.swing.JFileChooser.*
 import javax.swing.JColorChooser
-import static javax.swing.JOptionPane.*
 
 application(title:'SimpleDialogs',
   size:[300,150],
@@ -18,7 +17,7 @@ application(title:'SimpleDialogs',
 		def result = JOptionPane.showInputDialog("What is your name?")
 		view.result.text = "Your name is ${result}"
 	})
-	button(text:'Confirm', actionPerformed: {confirm()})
+	button(text:'Confirm', actionPerformed: {controller.confirm()})
 	button(text:'Open File...', actionPerformed: {
 		controller.openSaveFileOrDir('Open a File...', true, FILES_ONLY)
 	})

@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane
+import static javax.swing.JOptionPane.*
 import javax.swing.JFileChooser
 
 class SimpleDialogsController {
@@ -21,9 +23,10 @@ class SimpleDialogsController {
 			case CANCEL_OPTION:
 				view.result.text = "You selected Cancel."
 				break
+		}
 	}
 	
-	def openSaveFileOrDir = { msg, openFile, selectionMode, prefix ->
+	def openSaveFileOrDir = { msg, openFile, selectionMode ->
 		def result
 		model.fileChooser.setDialogTitle(msg)
 		model.fileChooser.setFileSelectionMode(selectionMode)
