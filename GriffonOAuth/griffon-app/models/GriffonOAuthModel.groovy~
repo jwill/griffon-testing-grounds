@@ -1,0 +1,10 @@
+import groovy.beans.Bindable
+
+class GriffonOAuthModel {
+   @Bindable twitter
+   def consumerKey = "gzzqwfz3gAoi4467v8dw"
+   def secretKey = "XGMsM6fyj8wdhKVHjlmYC9U88mISXALOcXOxLMUA"
+   @Bindable requestToken
+   @Bindable accessToken
+   
+}
